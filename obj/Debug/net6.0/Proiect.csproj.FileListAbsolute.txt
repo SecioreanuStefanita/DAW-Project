@@ -64,3 +64,4 @@ C:\Users\Steph\Desktop\DAW\Proiect\obj\Debug\net6.0\ref\Proiect.dll
 C:\Users\Steph\Desktop\DAW\Proiect\obj\Debug\net6.0\Proiect.pdb
 C:\Users\Steph\Desktop\DAW\Proiect\obj\Debug\net6.0\Proiect.genruntimeconfig.cache
 C:\Users\Steph\Desktop\DAW\Proiect\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\Steph\Desktop\DAW\Proiect\bin\Debug\net6.0\BCrypt.Net-Core.dll
