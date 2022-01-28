@@ -8,8 +8,9 @@ using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Proiect.Core.IRepositories;
 using System.Threading.Tasks;
-
+using Proiect.Core.IConfig;
 namespace Proiect.Services
 {
     public class UserService : IUserService
@@ -17,13 +18,15 @@ namespace Proiect.Services
 
         public ApplicationDbContext _ApplicationDbContext;
         private IJWTUtils _iJWtUtils;
-        private readonly AppSettings _appSettings;
 
-        public UserService(ApplicationDbContext ApplicationDbContext, IJWTUtils iJWtUtils, IOptions<AppSettings> appSettings)
+        private readonly IUnitofWork _unitOfWork;
+
+
+        public UserService(ApplicationDbContext ApplicationDbContext, IJWTUtils iJWtUtils,  IUnitofWork unitOfWork)
         {
             _ApplicationDbContext = ApplicationDbContext;
             _iJWtUtils = iJWtUtils;
-            _appSettings = appSettings.Value;
+            _unitOfWork = unitOfWork;
         }
 
 
@@ -46,9 +49,13 @@ namespace Proiect.Services
             throw new NotImplementedException();
         }
 
-        public User GetById(Guid id)
+        async Task<User> IUserService.GetById(Guid id)
         {
-            throw new NotImplementedException();
+            var user = await _unitOfWork.Users.GetById(id);
+                if(user == null){
+                    return null;
+                }
+               return user;
         }
     }
 }

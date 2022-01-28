@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Proiect.Core.IConfig;
 using Proiect.Utilities.JWTUtilis;
 using Proiect.Utilities;
+using Proiect.Services;
 namespace Proiect
 {
     public static class Startup
@@ -25,6 +26,7 @@ namespace Proiect
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IJWTUtils, JWTUtils>();
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IUnitofWork, UnitOfWork>();
 
         }

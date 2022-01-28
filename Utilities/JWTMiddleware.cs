@@ -25,10 +25,10 @@ namespace Proiect.Utilities
             var token = httpContext.Request.Headers["Autorization"].FirstOrDefault()?.Split("").Last();
 
             var userId = jWTUtils.ValidateJWTToken(token);
-
+            
             if(userId != Guid.Empty)
             {
-                httpContext.Items["User"] = userService.GetById(userId);
+                httpContext.Items["Users"] = userService.GetById(userId);
             }
 
             await _next(httpContext);
