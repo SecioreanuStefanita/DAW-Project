@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PWNDp4TPxWnERtxfWjEXuIII4EWeQtedEPtuIXqmguttWOEI7Pee6MLfUrhdNLZ5UVbh7lyTIv5ghR8q9U4FyQ==",
+  "dgSpecHash": "6/4aYFUqYrcmER4oU2lW609/8/h+6CLjoqF3DP0UrJIVmE9t+t2OZ+CA7nt5b5RnqlC9LzSRueZwlFWZkTQjxg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Steph\\Desktop\\DAW\\Proiect\\Proiect.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Steph\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Steph\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Steph\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.1\\microsoft.aspnetcore.cryptography.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\Steph\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.1\\microsoft.aspnetcore.cryptography.keyderivation.6.0.1.nupkg.sha512",

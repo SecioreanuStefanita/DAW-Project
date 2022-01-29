@@ -5,7 +5,7 @@ using Proiect.Core.Repositories;
 
 namespace Proiect.Data
 {
-    public class UnitOfWork: IUnitofWork,IDisposable
+    public class UnitOfWork: IUnitofWork
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger _logger;
@@ -28,9 +28,9 @@ namespace Proiect.Data
 
         }
 
-      public void Dispose()
-        {
-            _context.Dispose();
-        }
+    //   public void Dispose()
+    //     {
+    //         _context.Dispose();
+    //     }
     }
 }

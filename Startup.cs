@@ -1,6 +1,9 @@
 using Proiect.Data;
 using Microsoft.EntityFrameworkCore;
 using Proiect.Core.IConfig;
+using Proiect.Utilities.JWTUtilis;
+using Proiect.Utilities;
+using Proiect.Services;
 namespace Proiect
 {
     public static class Startup
@@ -22,8 +25,9 @@ namespace Proiect
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
-             builder.Services.AddScoped<IUnitofWork, UnitOfWork>();
+            builder.Services.AddScoped<IJWTUtils, JWTUtils>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IUnitofWork, UnitOfWork>();
 
         }
         private static void Configure(WebApplication app)
@@ -35,7 +39,7 @@ namespace Proiect
             }
 
             app.UseHttpsRedirection();
-
+            app.UseMiddleware<JWTMiddleware>();
             app.UseAuthorization();
 
             app.MapControllers();
