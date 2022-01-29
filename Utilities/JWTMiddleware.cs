@@ -28,7 +28,7 @@ namespace Proiect.Utilities
             
             if(userId != Guid.Empty)
             {
-                httpContext.Items["Users"] = userService.GetById(userId);
+                httpContext.Items["Users"] = await userService.GetById(userId);
             }
 
             await _next(httpContext);
