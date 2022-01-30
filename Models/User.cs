@@ -15,5 +15,11 @@ namespace Proiect.Models
         public string PasswordHash { get; set; }
 
         public Role Role { get; set; }
+
+        public UserDetails UserDetails { get; set; }
+
+         public ICollection<Orders> Orders { get; set; }
+
+         public ICollection<Rentings> Rentings { get; set; }
     }
 }

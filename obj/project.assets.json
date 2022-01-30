@@ -2280,11 +2280,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Steph\\Desktop\\DAW\\Proiect\\Proiect.csproj",
+      "projectUniqueName": "C:\\Users\\Steph\\Desktop\\DAW\\DAW-Project\\Proiect.csproj",
       "projectName": "Proiect",
-      "projectPath": "C:\\Users\\Steph\\Desktop\\DAW\\Proiect\\Proiect.csproj",
+      "projectPath": "C:\\Users\\Steph\\Desktop\\DAW\\DAW-Project\\Proiect.csproj",
       "packagesPath": "C:\\Users\\Steph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Steph\\Desktop\\DAW\\Proiect\\obj\\",
+      "outputPath": "C:\\Users\\Steph\\Desktop\\DAW\\DAW-Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Steph\\AppData\\Roaming\\NuGet\\NuGet.Config",

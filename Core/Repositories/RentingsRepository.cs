@@ -5,9 +5,9 @@ using Proiect.Models;
 
 namespace Proiect.Core.Repositories
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class RentingsRepository : GenericRepository<Rentings>, IRentingsRepository
     {
-        public UserRepository(
+        public RentingsRepository(
             ApplicationDbContext context,
             ILogger logger
         ): base(context,logger)
@@ -15,7 +15,8 @@ namespace Proiect.Core.Repositories
 
         }
 
-        public override async  Task<IEnumerable<User>> All()
+
+        public override async  Task<IEnumerable<Rentings>> All()
         {
             try
             {
@@ -23,28 +24,29 @@ namespace Proiect.Core.Repositories
             }
             catch( Exception ex)
             {
-                _logger.LogError(ex,"{Repo} All method error", typeof(UserRepository));
-                return new List<User>();
+                _logger.LogError(ex,"{Repo} All method error", typeof(RentingsRepository));
+                return new List<Rentings>();
             }
         }
 
-            public override async  Task<bool> Upsert(User entity)
+            public override async  Task<bool> Upsert(Rentings entity)
         {   
              try
             {
-            var existingUser = await dbSet.Where(x => x.Id == entity.Id).FirstOrDefaultAsync();
-            if(existingUser == null)
+            var existingRentings = await dbSet.Where(x => x.Id == entity.Id).FirstOrDefaultAsync();
+            if(existingRentings == null)
                 return await Add(entity);
             
-            existingUser.FirstName = entity.FirstName;
-            existingUser.Email = entity.Email;
-            existingUser.LastName = entity.LastName;
-            existingUser.Role = entity.Role;
+            existingRentings.DateFinished = entity.DateFinished;
+            existingRentings.DateStart = entity.DateStart;
+            existingRentings.UserId = entity.UserId;
+            existingRentings.ProductsId = entity.ProductsId;
+            existingRentings.TotalPrice = entity.TotalPrice;
             return true;
             }
             catch( Exception ex)
             {
-                _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserRepository));
+                _logger.LogError(ex,"{Repo} Upsert method error", typeof(RentingsRepository));
                 return false;
             }
         }
@@ -63,7 +65,7 @@ namespace Proiect.Core.Repositories
             }
             catch(Exception ex)
             {
-                   _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserRepository));
+                   _logger.LogError(ex,"{Repo} Upsert method error", typeof(RentingsRepository));
                 return false;
             }
         }

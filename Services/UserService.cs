@@ -57,5 +57,25 @@ namespace Proiect.Services
                 }
                return user;
         }
+
+       public Object GetAllData(Guid id)
+        {
+          var innerJoinResult = from s in _ApplicationDbContext.Users // outer sequence
+							  join st in _ApplicationDbContext.UserDetails //inner sequence 
+							  on s.Id equals st.UserId // key selector 
+							  select new { // result selector 
+										s.Id,
+                                        s.LastName,
+                                        s.FirstName,
+                                        s.Username,
+                                        st.PhoneNumber,
+                                        st.BusinessDetails,
+                                        st.Address
+										};
+                if(innerJoinResult == null){
+                    return null;
+                }
+              return innerJoinResult;
+        }
     }
 }

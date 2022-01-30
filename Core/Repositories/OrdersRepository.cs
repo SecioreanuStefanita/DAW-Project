@@ -5,9 +5,9 @@ using Proiect.Models;
 
 namespace Proiect.Core.Repositories
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class OrdersRepository : GenericRepository<Orders>, IOrdersRepository
     {
-        public UserRepository(
+        public OrdersRepository(
             ApplicationDbContext context,
             ILogger logger
         ): base(context,logger)
@@ -15,7 +15,7 @@ namespace Proiect.Core.Repositories
 
         }
 
-        public override async  Task<IEnumerable<User>> All()
+        public override async  Task<IEnumerable<Orders>> All()
         {
             try
             {
@@ -23,28 +23,28 @@ namespace Proiect.Core.Repositories
             }
             catch( Exception ex)
             {
-                _logger.LogError(ex,"{Repo} All method error", typeof(UserRepository));
-                return new List<User>();
+                _logger.LogError(ex,"{Repo} All method error", typeof(OrdersRepository));
+                return new List<Orders>();
             }
         }
 
-            public override async  Task<bool> Upsert(User entity)
+            public override async  Task<bool> Upsert(Orders entity)
         {   
              try
             {
-            var existingUser = await dbSet.Where(x => x.Id == entity.Id).FirstOrDefaultAsync();
-            if(existingUser == null)
+            var existingOrders = await dbSet.Where(x => x.Id == entity.Id).FirstOrDefaultAsync();
+            if(existingOrders == null)
                 return await Add(entity);
             
-            existingUser.FirstName = entity.FirstName;
-            existingUser.Email = entity.Email;
-            existingUser.LastName = entity.LastName;
-            existingUser.Role = entity.Role;
+            existingOrders.UserId = entity.UserId;
+            existingOrders.Id = entity.Id;
+            existingOrders.Price = entity.Price;
+            existingOrders.ProductsId = entity.ProductsId;
             return true;
             }
             catch( Exception ex)
             {
-                _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserRepository));
+                _logger.LogError(ex,"{Repo} Upsert method error", typeof(OrdersRepository));
                 return false;
             }
         }
@@ -63,7 +63,7 @@ namespace Proiect.Core.Repositories
             }
             catch(Exception ex)
             {
-                   _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserRepository));
+                   _logger.LogError(ex,"{Repo} Upsert method error", typeof(OrdersRepository));
                 return false;
             }
         }

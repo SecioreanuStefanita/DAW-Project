@@ -45,7 +45,7 @@ namespace Proiect.Controllers
             var userToCreate = new User
             {
                 FirstName = user.FirstName,
-                Role = Role.User,
+                Role = user.Role,
                 LastName = user.LastName,
                 Email = user.Email,
                 Username = user.Username,
@@ -70,7 +70,6 @@ namespace Proiect.Controllers
                 if(user == null){
                     return NotFound();
                 }
-                Console.WriteLine(user);
                return Ok(user);
         }
             [Authorization(Role.Admin)]
@@ -83,11 +82,21 @@ namespace Proiect.Controllers
 
             [Authorization(Role.Admin)]
             [HttpPost("{id}")]
-        public async Task<IActionResult> UpdateItem(Guid id, User user)
-        {
+        public async Task<IActionResult> UpdateItem(Guid id, UserCRUDRequestDTO user)
+        {    
               if(id != user.Id)
                     return BadRequest();
-            await _unitOfWork.Users.Upsert(user);
+                  var userToUpdate = new User
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Email = user.Email,
+                Username = user.Username,
+                Role = user.Role
+            };
+               
+
+            await _unitOfWork.Users.Upsert(userToUpdate);
             await _unitOfWork.CompleteAsync();
             return NoContent();
         } 
@@ -103,6 +112,22 @@ namespace Proiect.Controllers
             await _unitOfWork.Users.Delete(id);
             await _unitOfWork.CompleteAsync();
             return Ok(item);
-        } 
+        
+        
+        
+        }
+
+
+
+            [Authorization(Role.User)]
+            [HttpGet("getAllData/{id}")]
+        public async Task<IActionResult> GetAllData(Guid id)
+        {
+            var item = _userService.GetAllData(id);
+            if(item == null)
+            return BadRequest();
+            await _unitOfWork.CompleteAsync();
+            return Ok(item);
+        }  
     }
 }

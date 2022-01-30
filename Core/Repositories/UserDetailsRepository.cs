@@ -5,9 +5,9 @@ using Proiect.Models;
 
 namespace Proiect.Core.Repositories
 {
-    public class UserRepository : GenericRepository<User>, IUserRepository
+    public class UserDetailsRepository : GenericRepository<UserDetails>, IUserDetailsRepository
     {
-        public UserRepository(
+        public UserDetailsRepository(
             ApplicationDbContext context,
             ILogger logger
         ): base(context,logger)
@@ -15,7 +15,7 @@ namespace Proiect.Core.Repositories
 
         }
 
-        public override async  Task<IEnumerable<User>> All()
+        public override async  Task<IEnumerable<UserDetails>> All()
         {
             try
             {
@@ -23,28 +23,28 @@ namespace Proiect.Core.Repositories
             }
             catch( Exception ex)
             {
-                _logger.LogError(ex,"{Repo} All method error", typeof(UserRepository));
-                return new List<User>();
+                _logger.LogError(ex,"{Repo} All method error", typeof(UserDetailsRepository));
+                return new List<UserDetails>();
             }
         }
 
-            public override async  Task<bool> Upsert(User entity)
+            public override async  Task<bool> Upsert(UserDetails entity)
         {   
              try
             {
-            var existingUser = await dbSet.Where(x => x.Id == entity.Id).FirstOrDefaultAsync();
-            if(existingUser == null)
+            var existingUserDetails = await dbSet.Where(x => x.Id == entity.Id).FirstOrDefaultAsync();
+            if(existingUserDetails == null)
                 return await Add(entity);
             
-            existingUser.FirstName = entity.FirstName;
-            existingUser.Email = entity.Email;
-            existingUser.LastName = entity.LastName;
-            existingUser.Role = entity.Role;
+            existingUserDetails.Address = entity.Address;
+            existingUserDetails.BusinessDetails = entity.BusinessDetails;
+            existingUserDetails.PhoneNumber = entity.PhoneNumber;
+            existingUserDetails.UserId = entity.UserId;
             return true;
             }
             catch( Exception ex)
             {
-                _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserRepository));
+                _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserDetailsRepository));
                 return false;
             }
         }
@@ -63,7 +63,7 @@ namespace Proiect.Core.Repositories
             }
             catch(Exception ex)
             {
-                   _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserRepository));
+                   _logger.LogError(ex,"{Repo} Upsert method error", typeof(UserDetailsRepository));
                 return false;
             }
         }

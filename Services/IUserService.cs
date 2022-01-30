@@ -12,5 +12,7 @@ namespace Proiect.Services
         UserResponseDTO Authentificate(UserRequestDTO model);
         IEnumerable<User> GetAllUsers();
         Task<User> GetById(Guid id);
+
+        Object GetAllData(Guid id);
     }
 }

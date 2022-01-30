@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6/4aYFUqYrcmER4oU2lW609/8/h+6CLjoqF3DP0UrJIVmE9t+t2OZ+CA7nt5b5RnqlC9LzSRueZwlFWZkTQjxg==",
+  "dgSpecHash": "B8FKz/uhjpUm6Drw8OTuqelfCkytk4gBaJa375fcxzvsKJNdHh4Jrrp1OB3Aa8/XnfxjeKA1otkhn29lnf3bgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Steph\\Desktop\\DAW\\Proiect\\Proiect.csproj",
+  "projectFilePath": "C:\\Users\\Steph\\Desktop\\DAW\\DAW-Project\\Proiect.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Steph\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\Steph\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
