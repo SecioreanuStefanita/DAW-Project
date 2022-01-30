@@ -1,0 +1,883 @@
+{
+	"info": {
+		"_postman_id": "0170d751-2582-48d8-b4fc-719c119882e2",
+		"name": "Daw Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Requests",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Ciosti\",\r\n    \"Username\": \"viezureprostin2\",\r\n    \"Password\": \"wc\",\r\n    \"Email\": \"viezureBaros@gmail.com\",\r\n    \"Role\":0,\r\n    \"LastName\": \"Badger\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"FirstName\": \"admin\",\r\n    \"Username\": \"admin\",\r\n    \"Password\": \"admin\",\r\n    \"Email\": \"admin@gmail.com\",\r\n    \"LastName\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Users/authentificate",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Users",
+								"authentificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ3MDIzNSwiZXhwIjoxNjQ0MzM0MjM1LCJpYXQiOjE2NDM0NzAyMzV9.1WEOPcHLwtAiDLZsV5FDHbkPU3mKcaZeb18c8ZJnBgQ",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ2Y2FkYWIyLTYwZWUtNDM4Ni0yNWEzLTA4ZDllMjQ1ZGM3MyIsIm5iZiI6MTY0MzM2NDQzMCwiZXhwIjoxNjQ0MjI4NDMwLCJpYXQiOjE2NDMzNjQ0MzB9.Dow0u1pueMs0hDAB5WajzQUUcjuKBUjdUG3uQVtk16E",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Users/C1392318-9D4A-49F6-A011-08D9E23E06A7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Users",
+								"C1392318-9D4A-49F6-A011-08D9E23E06A7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1NDM3NywiZXhwIjoxNjQ0NDE4Mzc3LCJpYXQiOjE2NDM1NTQzNzd9.kBimIoBECtXgq4lUjkKQghkfBDK6LauazyWtn18PAbA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1NDM3NywiZXhwIjoxNjQ0NDE4Mzc3LCJpYXQiOjE2NDM1NTQzNzd9.kBimIoBECtXgq4lUjkKQghkfBDK6LauazyWtn18PAbA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": \"3bf35ed6-d4e7-4c04-3c20-08d9e3f61fa0\",\r\n    \"FirstName\": \"admin\",\r\n    \"Email\": \"admin@gmail.com\",\r\n    \"LastName\": \"admin\",\r\n    \"Username\":\"admin\",\r\n    \"Role\": \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Users/3bf35ed6-d4e7-4c04-3c20-08d9e3f61fa0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Users",
+								"3bf35ed6-d4e7-4c04-3c20-08d9e3f61fa0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzU0MzMyNiwiZXhwIjoxNjQ0NDA3MzI2LCJpYXQiOjE2NDM1NDMzMjZ9.Gl5AScL5oOe_YIeInc3kpDdIDvzdJ0Q6ZGE8FRggtCo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Users/c1392318-9d4a-49f6-a011-08d9e23e06a7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Users",
+								"c1392318-9d4a-49f6-a011-08d9e23e06a7"
+							],
+							"query": [
+								{
+									"key": "Autorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ3MDIzNSwiZXhwIjoxNjQ0MzM0MjM1LCJpYXQiOjE2NDM0NzAyMzV9.1WEOPcHLwtAiDLZsV5FDHbkPU3mKcaZeb18c8ZJnBgQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserAllData",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU2MzgzMywiZXhwIjoxNjQ0NDI3ODMzLCJpYXQiOjE2NDM1NjM4MzN9.U2vi63Bkegug95V_iCKiLmMcQLBgvpIbLLC9HDhH670",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Users/getAllData/68f85afc-8497-46c0-3c21-08d9e3f61fa0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Users",
+								"getAllData",
+								"68f85afc-8497-46c0-3c21-08d9e3f61fa0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products Requests",
+			"item": [
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1NTkwNCwiZXhwIjoxNjQ0NDE5OTA0LCJpYXQiOjE2NDM1NTU5MDR9.abg9DPV_9UYhzc2A_Tk8v9s1lMb-ZqgzkDH7b-JRpTY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":\"66b68bee-b02d-4720-adf7-08d9e3e67ee6\",\r\n    \"Name\":\"Masina tip Betoniera 222\",\r\n    \"Description\":\"Design durabil si robust: Betoniera profesionala YAMATO este proiectata pentru a rezista ani de utilizare in conditii grele si orice tip de lucrare: interior / exterior, curte, gradina, santier.Motor cu bobinaj 100% cupru masiv: Mixerul YAMATO vine echipat din fabrica cu un motor monofazat puternic si rezistent in orice conditii.Material durabil si structura stabila\",\r\n    \"Price\":\"1700 lei/ 105 lei pe zi\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Products/66b68bee-b02d-4720-adf7-08d9e3e67ee6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Products",
+								"66b68bee-b02d-4720-adf7-08d9e3e67ee6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All  Products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1NTkwNCwiZXhwIjoxNjQ0NDE5OTA0LCJpYXQiOjE2NDM1NTU5MDR9.abg9DPV_9UYhzc2A_Tk8v9s1lMb-ZqgzkDH7b-JRpTY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1MDA3OSwiZXhwIjoxNjQ0NDE0MDc5LCJpYXQiOjE2NDM1NTAwNzl9.Uzr5BBzgHug6VkmLhVKZ9JLb7kQHcmQbeLCG5ak7gwc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Masina tip Betoniera 3\",\r\n    \"Description\":\"Design durabil si robust: Betoniera profesionala YAMATO este proiectata pentru a rezista ani de utilizare in conditii grele si orice tip de lucrare: interior / exterior, curte, gradina, santier.Motor cu bobinaj 100% cupru masiv: Mixerul YAMATO vine echipat din fabrica cu un motor monofazat puternic si rezistent in orice conditii.Material durabil si structura stabila\",\r\n    \"Price\":\"1900 lei/ 150 lei pe zi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzU0MzMyNiwiZXhwIjoxNjQ0NDA3MzI2LCJpYXQiOjE2NDM1NDMzMjZ9.Gl5AScL5oOe_YIeInc3kpDdIDvzdJ0Q6ZGE8FRggtCo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Products/81ace901-d2be-4bee-aa54-08d9e3e42016",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Products",
+								"81ace901-d2be-4bee-aa54-08d9e3e42016"
+							],
+							"query": [
+								{
+									"key": "Autorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ3MDIzNSwiZXhwIjoxNjQ0MzM0MjM1LCJpYXQiOjE2NDM0NzAyMzV9.1WEOPcHLwtAiDLZsV5FDHbkPU3mKcaZeb18c8ZJnBgQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1MDA3OSwiZXhwIjoxNjQ0NDE0MDc5LCJpYXQiOjE2NDM1NTAwNzl9.Uzr5BBzgHug6VkmLhVKZ9JLb7kQHcmQbeLCG5ak7gwc",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ2Y2FkYWIyLTYwZWUtNDM4Ni0yNWEzLTA4ZDllMjQ1ZGM3MyIsIm5iZiI6MTY0MzM2NDQzMCwiZXhwIjoxNjQ0MjI4NDMwLCJpYXQiOjE2NDMzNjQ0MzB9.Dow0u1pueMs0hDAB5WajzQUUcjuKBUjdUG3uQVtk16E",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Products/2b75f45e-0306-4974-5648-08d9e3f6b4d4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Products",
+								"2b75f45e-0306-4974-5648-08d9e3f6b4d4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Details Requests",
+			"item": [
+				{
+					"name": "Get All  UserDetails",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1NDM3NywiZXhwIjoxNjQ0NDE4Mzc3LCJpYXQiOjE2NDM1NTQzNzd9.kBimIoBECtXgq4lUjkKQghkfBDK6LauazyWtn18PAbA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/UserDetails",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"UserDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Details",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzU0MzMyNiwiZXhwIjoxNjQ0NDA3MzI2LCJpYXQiOjE2NDM1NDMzMjZ9.Gl5AScL5oOe_YIeInc3kpDdIDvzdJ0Q6ZGE8FRggtCo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/UserDetails/81ace901-d2be-4bee-aa54-08d9e3e42016",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"UserDetails",
+								"81ace901-d2be-4bee-aa54-08d9e3e42016"
+							],
+							"query": [
+								{
+									"key": "Autorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ3MDIzNSwiZXhwIjoxNjQ0MzM0MjM1LCJpYXQiOjE2NDM0NzAyMzV9.1WEOPcHLwtAiDLZsV5FDHbkPU3mKcaZeb18c8ZJnBgQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Details By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1MjQ5MiwiZXhwIjoxNjQ0NDE2NDkyLCJpYXQiOjE2NDM1NTI0OTJ9.j6lCF96hI1SA4gRlXXqn4pqVZ0rFVmVGACCaoX8vBZs",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ2Y2FkYWIyLTYwZWUtNDM4Ni0yNWEzLTA4ZDllMjQ1ZGM3MyIsIm5iZiI6MTY0MzM2NDQzMCwiZXhwIjoxNjQ0MjI4NDMwLCJpYXQiOjE2NDMzNjQ0MzB9.Dow0u1pueMs0hDAB5WajzQUUcjuKBUjdUG3uQVtk16E",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/UserDetails/a583a2d8-78e9-47f5-5e52-08d9e3fbde11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"UserDetails",
+								"a583a2d8-78e9-47f5-5e52-08d9e3fbde11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create UserDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1MjQ5MiwiZXhwIjoxNjQ0NDE2NDkyLCJpYXQiOjE2NDM1NTI0OTJ9.j6lCF96hI1SA4gRlXXqn4pqVZ0rFVmVGACCaoX8vBZs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Address\":\"Strada Soarelui 11\",\r\n    \"PhoneNumber\":\"+40787556591\",\r\n    \"BusinessDetails\":\"PFA Dezvoltare Software, nevoie de construire sediu de la 0. Necesit betoniere\",\r\n    \"UserId\":\"68f85afc-8497-46c0-3c21-08d9e3f61fa0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/UserDetails",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"UserDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update UserDetails",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1NDM3NywiZXhwIjoxNjQ0NDE4Mzc3LCJpYXQiOjE2NDM1NTQzNzd9.kBimIoBECtXgq4lUjkKQghkfBDK6LauazyWtn18PAbA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Address\":\"Strada Soarelui 1wqwe1\",\r\n    \"PhoneNumber\":\"+40787556591\",\r\n    \"BusinessDetails\":\"PFA Dezvoltare Software, nevoie de construire sediu de la 0. Necesit betoniere\",\r\n    \"UserId\":\"68f85afc-8497-46c0-3c21-08d9e3f61fa0\",\r\n    \"Id\":\"a583a2d8-78e9-47f5-5e52-08d9e3fbde11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/UserDetails/a583a2d8-78e9-47f5-5e52-08d9e3fbde11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"UserDetails",
+								"a583a2d8-78e9-47f5-5e52-08d9e3fbde11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders Requests",
+			"item": [
+				{
+					"name": "Get All  Orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1OTEwMCwiZXhwIjoxNjQ0NDIzMTAwLCJpYXQiOjE2NDM1NTkxMDB9.TGTxxYTZr2wFjkGdxnPHUTYtOyAinQMQPM4ljwl1_Kw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzU0MzMyNiwiZXhwIjoxNjQ0NDA3MzI2LCJpYXQiOjE2NDM1NDMzMjZ9.Gl5AScL5oOe_YIeInc3kpDdIDvzdJ0Q6ZGE8FRggtCo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Orders/81ace901-d2be-4bee-aa54-08d9e3e42016",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Orders",
+								"81ace901-d2be-4bee-aa54-08d9e3e42016"
+							],
+							"query": [
+								{
+									"key": "Autorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ3MDIzNSwiZXhwIjoxNjQ0MzM0MjM1LCJpYXQiOjE2NDM0NzAyMzV9.1WEOPcHLwtAiDLZsV5FDHbkPU3mKcaZeb18c8ZJnBgQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1OTEwMCwiZXhwIjoxNjQ0NDIzMTAwLCJpYXQiOjE2NDM1NTkxMDB9.TGTxxYTZr2wFjkGdxnPHUTYtOyAinQMQPM4ljwl1_Kw",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ2Y2FkYWIyLTYwZWUtNDM4Ni0yNWEzLTA4ZDllMjQ1ZGM3MyIsIm5iZiI6MTY0MzM2NDQzMCwiZXhwIjoxNjQ0MjI4NDMwLCJpYXQiOjE2NDMzNjQ0MzB9.Dow0u1pueMs0hDAB5WajzQUUcjuKBUjdUG3uQVtk16E",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Orders/674090e9-0ac4-4c0b-30da-08d9e406a054",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Orders",
+								"674090e9-0ac4-4c0b-30da-08d9e406a054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU1NzEyOCwiZXhwIjoxNjQ0NDIxMTI4LCJpYXQiOjE2NDM1NTcxMjh9.yeiC_iTAXyeOlloh39l3cqYSirDJgme-moeITUjYyyU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"UserId\":\"3bf35ed6-d4e7-4c04-3c20-08d9e3f61fa0\",\r\n   \"ProductsId\":\"66b68bee-b02d-4720-adf7-08d9e3e67ee6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Orders",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ4MTI0MSwiZXhwIjoxNjQ0MzQ1MjQxLCJpYXQiOjE2NDM0ODEyNDF9.K4Qs7EZ7e5GGDh5S0daCRs00Vwj1pqzW0AaVnpAZWDI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Masina tip Betoniera 2\",\r\n    \"Description\":\"Design durabil si robust: Betoniera profesionala YAMATO este proiectata pentru a rezista ani de utilizare in conditii grele si orice tip de lucrare: interior / exterior, curte, gradina, santier.Motor cu bobinaj 100% cupru masiv: Mixerul YAMATO vine echipat din fabrica cu un motor monofazat puternic si rezistent in orice conditii.Material durabil si structura stabila\",\r\n    \"Price\":\"1700 lei/ 130 lei pe zi\",\r\n    \"Orders\": null,\r\n    \"Rentings\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Orders/66b68bee-b02d-4720-adf7-08d9e3e67ee6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Orders",
+								"66b68bee-b02d-4720-adf7-08d9e3e67ee6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rentings Requests",
+			"item": [
+				{
+					"name": "Get Renting By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzU0MzMyNiwiZXhwIjoxNjQ0NDA3MzI2LCJpYXQiOjE2NDM1NDMzMjZ9.Gl5AScL5oOe_YIeInc3kpDdIDvzdJ0Q6ZGE8FRggtCo",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQ2Y2FkYWIyLTYwZWUtNDM4Ni0yNWEzLTA4ZDllMjQ1ZGM3MyIsIm5iZiI6MTY0MzM2NDQzMCwiZXhwIjoxNjQ0MjI4NDMwLCJpYXQiOjE2NDMzNjQ0MzB9.Dow0u1pueMs0hDAB5WajzQUUcjuKBUjdUG3uQVtk16E",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Rentings/81ace901-d2be-4bee-aa54-08d9e3e42016",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Rentings",
+								"81ace901-d2be-4bee-aa54-08d9e3e42016"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ4MTI0MSwiZXhwIjoxNjQ0MzQ1MjQxLCJpYXQiOjE2NDM0ODEyNDF9.K4Qs7EZ7e5GGDh5S0daCRs00Vwj1pqzW0AaVnpAZWDI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Rentings/66b68bee-b02d-4720-adf7-08d9e3e67ee6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Rentings",
+								"66b68bee-b02d-4720-adf7-08d9e3e67ee6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Rating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU2MTEwMSwiZXhwIjoxNjQ0NDI1MTAxLCJpYXQiOjE2NDM1NjExMDF9.nOrmVVFnnikpZb1eB9RWRKlxYmofvEzvIkxDAw9JsoM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"UserId\":\"3bf35ed6-d4e7-4c04-3c20-08d9e3f61fa0\",\r\n\"ProductsId\":\"66b68bee-b02d-4720-adf7-08d9e3e67ee6\",\r\n\"DateStart\":\"Jan 1, 2009\",\r\n\"DateFinished\":\"Jan 16, 2009\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7044/Rentings",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Rentings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All  Ratings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjNiZjM1ZWQ2LWQ0ZTctNGMwNC0zYzIwLTA4ZDllM2Y2MWZhMCIsIm5iZiI6MTY0MzU2MTEwMSwiZXhwIjoxNjQ0NDI1MTAxLCJpYXQiOjE2NDM1NjExMDF9.nOrmVVFnnikpZb1eB9RWRKlxYmofvEzvIkxDAw9JsoM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Rentings",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Rentings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ratings",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Autorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzU0MzMyNiwiZXhwIjoxNjQ0NDA3MzI2LCJpYXQiOjE2NDM1NDMzMjZ9.Gl5AScL5oOe_YIeInc3kpDdIDvzdJ0Q6ZGE8FRggtCo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7044/Rentings/81ace901-d2be-4bee-aa54-08d9e3e42016",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7044",
+							"path": [
+								"Rentings",
+								"81ace901-d2be-4bee-aa54-08d9e3e42016"
+							],
+							"query": [
+								{
+									"key": "Autorization",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxMzkyMzE4LTlkNGEtNDlmNi1hMDExLTA4ZDllMjNlMDZhNyIsIm5iZiI6MTY0MzQ3MDIzNSwiZXhwIjoxNjQ0MzM0MjM1LCJpYXQiOjE2NDM0NzAyMzV9.1WEOPcHLwtAiDLZsV5FDHbkPU3mKcaZeb18c8ZJnBgQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Special Requests",
+			"item": []
+		}
+	]
+}
